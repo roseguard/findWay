@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>movement.png</file>
+        <file>quad.png</file>
+        <file>wall.png</file>
+    </qresource>
+</RCC>
