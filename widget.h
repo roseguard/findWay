@@ -9,6 +9,9 @@
 
 #include "waypoint.h"
 
+#define sizeX 11
+#define sizeY 9
+
 class Widget : public QGraphicsView
 {
     Q_OBJECT
@@ -17,17 +20,20 @@ public:
     Widget(QWidget *parent = 0);
     ~Widget();
 
+    char                *fieldPosses[sizeX];
     QGraphicsScene      *scene;
     wayPoint            *start;
     wayPoint            *finish;
 
-    wayPoint            *field[7][5];
+    wayPoint            *field[sizeX][sizeY];
     wayPoint            *activePoint;
     QVector<wayPoint*>  openVect;
 
     QVector<QGraphicsPixmapItem*>   movements;
 
     QPixmap             pix;
+
+    bool                inStepBack = false;
 
     void areaF();
     void setNewActive();
